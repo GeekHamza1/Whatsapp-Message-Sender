@@ -1,14 +1,10 @@
-import pywhatkit
+import pywhatkit as kit
 
-# Phone number of the recipient in international format (with country code, but without any leading zeros or plus sign)
-phone_number = "+1**********"
+# Phone number in international format (e.g., +1234567890)
+phone_number = '+1234567890'
 
-# Message you want to send
-message = "Hello Word"
+# The message you want to send
+message = 'Hello, this is a test message sent using pywhatkit!'
 
-# Hour and minute at which you want to send the message (optional)
-hour = 4
-minute = 15
-
-# Send the message using sendwhatmsg() function
-pywhatkit.sendwhatmsg(phone_number, message, hour, minute)
+# Send message (time is set to now, but pywhatkit requires a time in the future)
+kit.sendwhatmsg(phone_number, message, 0, 0)  # The time is set to 00:00 for "now"
